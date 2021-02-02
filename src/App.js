@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import PostList1 from './PostList1'
+import Welcome from './Welcome';
+import Process from './Process';
+import TodList from './TodoList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const element = <h1>Hello, world!</h1>;
+
+const todos = ['java','c++','reactjs'];
+
+class App extends Component{
+
+  constructor(props){
+    super(props)
+    this.state ={
+      streamId: "demo1"
+    }
+  }
+
+
+
+  componentDidMount(){
+  }
+
+
+  componentWillUnmount(){
+  }
+
+  render(){
+    
+  return(
+      <div>
+        {/* {element} */}
+        {/* <ul>
+          {
+            todos.map( (item,index) => 
+              <li key={index} onClick={(value)=>{
+                  console.log(value.target)}
+                }>
+                {item=='java'?'java+':item}
+              </li>
+            )
+          } 
+          </ul> */}
+           {/* <PostList1></PostList1>
+          <Welcome name='diaoby'></Welcome>
+          <Process></Process> */}
+          <TodList></TodList>
+      </div>   
+  )
+  }
 }
 
 export default App;
